@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+* {
+    box-sizing: border-box;
+}
+@media (max-width: 650px) {
+    body {
+        flex-direction: column;
+    }
+}
+body {
+    background-color: #0E0E10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    margin: 0;
+}
+p {
+    margin: 0;
+    height: 100%;
+}
+#board {
+    display: grid;
+    width: max(30rem, 45vw);
+    height: max(30rem, 45vw);
+    grid-template-columns: repeat(3, max(10rem, 15vw));
+    grid-template-rows: repeat(3, max(10rem, 15vw));
+    text-align: center;
+    vertical-align: center;
+    line-height: max( 10rem, 14vw);
+    font-family: 'Varela Round', sans-serif;
+    font-size: 15vw;
+    background-color: #769656;
+}
+#board div:nth-child(2), #board div:nth-child(8){
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+    background-color: #eeeed2;
+}
+#board div:nth-child(4), #board div:nth-child(6){
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    background-color: #eeeed2;
+}
+#board div:nth-child(5) {
+    border: 4px solid black;
+}
+#winMsg {
+    color: rgb(235, 235, 235);
+}
+.hidden {
+opacity: 0;
+}
+.hidden:hover {
+opacity: 0.2;
+}
