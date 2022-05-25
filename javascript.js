@@ -60,10 +60,12 @@ const gameBoard = (() => {
             notes[i].addEventListener('click', ()=> {
                 if(!gameboard[i]) {
                 if(turnX % 2 == 0) {
+                    audioSlap1.play();
                     notes[i].innerHTML = "x";
                     gameboard[i] = "x";
                 }
                 else {
+                    audioSlap2.play();
                     notes[i].innerHTML = "o";
                     gameboard[i] = "o";
                 }
@@ -89,11 +91,13 @@ const gameBoard = (() => {
     };
     return { resetBoard };
 })();
-const player = () => { 
-    
-};
+
+var audioNewGame = new Audio("./Assets/shogi-shuffle.mp3");
+var audioSlap1 = new Audio("./Assets/shogi1.mp3");
+var audioSlap2 = new Audio("./Assets/shogi2.mp3");
 
 document.getElementById('reset').addEventListener('click', (e)=> {
+    audioNewGame.play();
     e.target.value = "Restart Game"
     gameBoard.resetBoard();
 });
