@@ -16,13 +16,17 @@ const gameBoard = (() => {
         else
             p2 = p2.value;
         if(!winner)
-            winMsg = ""
+            winMsg = "It's a tie."
         if(winner == "x")
-            winMsg = `${p1} Wins!`;
+            winMsg = `${p1} wins!`;
         if(winner == "o")
-            winMsg = `${p2} Wins!`;
+            winMsg = `${p2} wins!`;
         display.innerHTML = winMsg;
-
+        for(let i = 0; i < gameboard.length; i++) {
+            if(notes[i].classList.contains('hidden')) {
+                notes[i].classList.add('disable');
+            }
+        }
     };
     const checkWin = () => { //there are def better ways of checking than this
         let winner = "";
@@ -47,11 +51,11 @@ const gameBoard = (() => {
     };
     const resetBoard = () => {
         turnX = 0;
-
         for(let i = 0; i < gameboard.length; i++) {
             gameboard[i] = "";
             notes[i].innerHTML = "x";
             notes[i].classList.add("hidden");
+            notes[i].classList.remove("disable");
             display.innerHTML = "";
             notes[i].addEventListener('click', ()=> {
                 if(!gameboard[i]) {

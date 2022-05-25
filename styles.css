@@ -55,3 +55,6 @@ opacity: 0;
 .hidden:hover {
 opacity: 0.2;
 }
+.disable {
+    visibility: hidden;
+}
