@@ -9,7 +9,7 @@
     }
 }
 @media (min-width: 650px) {
-    input {
+    input, h1 {
         margin-left: 10rem;
     }
 }
