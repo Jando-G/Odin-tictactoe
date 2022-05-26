@@ -101,4 +101,3 @@ document.getElementById('reset').addEventListener('click', (e)=> {
     e.target.value = "Restart Game"
     gameBoard.resetBoard();
 });
-
