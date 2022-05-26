@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 * {
     box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
 }
 @media (max-width: 650px) {
     body {
@@ -34,7 +35,6 @@ p {
     text-align: center;
     vertical-align: center;
     line-height: max( 10rem, 14vw);
-    font-family: 'Varela Round', sans-serif;
     font-size: 15vw;
     background-color: #769656;
 }
@@ -71,6 +71,7 @@ input {
     width: min(40vw, 20rem);
     height: min(7vw, 3rem);
     margin-top: 5vh;
+    font-size: 1.5rem;
 }
 input:not([type='button']) {
     border-radius: 20px;
